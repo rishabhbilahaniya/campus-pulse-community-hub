@@ -28,3 +28,9 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+
+- Marketing pages wrap content in `SiteLayout`; auth pages use `AuthShell`; dashboards use `DashboardShell` — keeps shared chrome in one place without pathless layout routes.
+- Unbuilt features must be labelled with `StatusBadge` / `PreviewNotice` and trigger `comingSoon()`; never fake backend results or statistics — the product is an honest design preview until backend work lands.
+- Shared copy and sample content live in `src/lib/content.ts` so pages stay consistent.
