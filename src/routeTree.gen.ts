@@ -15,6 +15,9 @@ import { Route as AiAssistantRouteImport } from './routes/ai-assistant'
 import { Route as CommunityMapRouteImport } from './routes/community-map'
 import { Route as FeaturesRouteImport } from './routes/features'
 import { Route as HowItWorksRouteImport } from './routes/how-it-works'
+import { Route as DashboardAdminRouteImport } from './routes/dashboard.admin'
+import { Route as DashboardStudentRouteImport } from './routes/dashboard.student'
+import { Route as DashboardTeacherRouteImport } from './routes/dashboard.teacher'
 import { Route as StudentLoginRouteImport } from './routes/student.login'
 import { Route as StudentRegisterRouteImport } from './routes/student.register'
 import { Route as TeacherLoginRouteImport } from './routes/teacher.login'
@@ -50,6 +53,21 @@ const HowItWorksRoute = HowItWorksRouteImport.update({
   path: '/how-it-works',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DashboardAdminRoute = DashboardAdminRouteImport.update({
+  id: '/dashboard/admin',
+  path: '/dashboard/admin',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardStudentRoute = DashboardStudentRouteImport.update({
+  id: '/dashboard/student',
+  path: '/dashboard/student',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardTeacherRoute = DashboardTeacherRouteImport.update({
+  id: '/dashboard/teacher',
+  path: '/dashboard/teacher',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const StudentLoginRoute = StudentLoginRouteImport.update({
   id: '/student/login',
   path: '/student/login',
@@ -78,6 +96,9 @@ export interface FileRoutesByFullPath {
   '/community-map': typeof CommunityMapRoute
   '/features': typeof FeaturesRoute
   '/how-it-works': typeof HowItWorksRoute
+  '/dashboard/admin': typeof DashboardAdminRoute
+  '/dashboard/student': typeof DashboardStudentRoute
+  '/dashboard/teacher': typeof DashboardTeacherRoute
   '/student/login': typeof StudentLoginRoute
   '/student/register': typeof StudentRegisterRoute
   '/teacher/login': typeof TeacherLoginRoute
@@ -90,6 +111,9 @@ export interface FileRoutesByTo {
   '/community-map': typeof CommunityMapRoute
   '/features': typeof FeaturesRoute
   '/how-it-works': typeof HowItWorksRoute
+  '/dashboard/admin': typeof DashboardAdminRoute
+  '/dashboard/student': typeof DashboardStudentRoute
+  '/dashboard/teacher': typeof DashboardTeacherRoute
   '/student/login': typeof StudentLoginRoute
   '/student/register': typeof StudentRegisterRoute
   '/teacher/login': typeof TeacherLoginRoute
@@ -103,6 +127,9 @@ export interface FileRoutesById {
   '/community-map': typeof CommunityMapRoute
   '/features': typeof FeaturesRoute
   '/how-it-works': typeof HowItWorksRoute
+  '/dashboard/admin': typeof DashboardAdminRoute
+  '/dashboard/student': typeof DashboardStudentRoute
+  '/dashboard/teacher': typeof DashboardTeacherRoute
   '/student/login': typeof StudentLoginRoute
   '/student/register': typeof StudentRegisterRoute
   '/teacher/login': typeof TeacherLoginRoute
@@ -117,6 +144,9 @@ export interface FileRouteTypes {
     | '/community-map'
     | '/features'
     | '/how-it-works'
+    | '/dashboard/admin'
+    | '/dashboard/student'
+    | '/dashboard/teacher'
     | '/student/login'
     | '/student/register'
     | '/teacher/login'
@@ -129,6 +159,9 @@ export interface FileRouteTypes {
     | '/community-map'
     | '/features'
     | '/how-it-works'
+    | '/dashboard/admin'
+    | '/dashboard/student'
+    | '/dashboard/teacher'
     | '/student/login'
     | '/student/register'
     | '/teacher/login'
@@ -141,6 +174,9 @@ export interface FileRouteTypes {
     | '/community-map'
     | '/features'
     | '/how-it-works'
+    | '/dashboard/admin'
+    | '/dashboard/student'
+    | '/dashboard/teacher'
     | '/student/login'
     | '/student/register'
     | '/teacher/login'
@@ -154,6 +190,9 @@ export interface RootRouteChildren {
   CommunityMapRoute: typeof CommunityMapRoute
   FeaturesRoute: typeof FeaturesRoute
   HowItWorksRoute: typeof HowItWorksRoute
+  DashboardAdminRoute: typeof DashboardAdminRoute
+  DashboardStudentRoute: typeof DashboardStudentRoute
+  DashboardTeacherRoute: typeof DashboardTeacherRoute
   StudentLoginRoute: typeof StudentLoginRoute
   StudentRegisterRoute: typeof StudentRegisterRoute
   TeacherLoginRoute: typeof TeacherLoginRoute
@@ -204,6 +243,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HowItWorksRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/dashboard/admin': {
+      id: '/dashboard/admin'
+      path: '/dashboard/admin'
+      fullPath: '/dashboard/admin'
+      preLoaderRoute: typeof DashboardAdminRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard/student': {
+      id: '/dashboard/student'
+      path: '/dashboard/student'
+      fullPath: '/dashboard/student'
+      preLoaderRoute: typeof DashboardStudentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard/teacher': {
+      id: '/dashboard/teacher'
+      path: '/dashboard/teacher'
+      fullPath: '/dashboard/teacher'
+      preLoaderRoute: typeof DashboardTeacherRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/student/login': {
       id: '/student/login'
       path: '/student/login'
@@ -242,6 +302,9 @@ const rootRouteChildren: RootRouteChildren = {
   CommunityMapRoute: CommunityMapRoute,
   FeaturesRoute: FeaturesRoute,
   HowItWorksRoute: HowItWorksRoute,
+  DashboardAdminRoute: DashboardAdminRoute,
+  DashboardStudentRoute: DashboardStudentRoute,
+  DashboardTeacherRoute: DashboardTeacherRoute,
   StudentLoginRoute: StudentLoginRoute,
   StudentRegisterRoute: StudentRegisterRoute,
   TeacherLoginRoute: TeacherLoginRoute,
