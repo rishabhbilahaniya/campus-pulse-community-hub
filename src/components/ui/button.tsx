@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-sm font-semibold cursor-pointer transition-all duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
@@ -16,11 +16,17 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        hero: "bg-brand text-primary-foreground shadow-glow hover:-translate-y-0.5 hover:shadow-elevated",
+        glass: "glass text-foreground hover:-translate-y-0.5 hover:bg-background",
+        "glass-dark": "border border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground backdrop-blur-md hover:-translate-y-0.5 hover:bg-primary-foreground/20",
+        soft: "bg-sky-soft text-primary hover:bg-accent",
+        navy: "bg-navy text-primary-foreground shadow-soft hover:-translate-y-0.5 hover:shadow-elevated",
       },
       size: {
         default: "h-9 px-4 py-2",
-        sm: "h-8 rounded-md px-3 text-xs",
-        lg: "h-10 rounded-md px-8",
+        sm: "h-8 px-3.5 text-xs",
+        lg: "h-11 px-7 text-[0.95rem]",
+        xl: "h-13 px-8 text-base",
         icon: "h-9 w-9",
       },
     },
