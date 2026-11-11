@@ -15,6 +15,10 @@ import { Route as AiAssistantRouteImport } from './routes/ai-assistant'
 import { Route as CommunityMapRouteImport } from './routes/community-map'
 import { Route as FeaturesRouteImport } from './routes/features'
 import { Route as HowItWorksRouteImport } from './routes/how-it-works'
+import { Route as StudentLoginRouteImport } from './routes/student.login'
+import { Route as StudentRegisterRouteImport } from './routes/student.register'
+import { Route as TeacherLoginRouteImport } from './routes/teacher.login'
+import { Route as TeacherRegisterRouteImport } from './routes/teacher.register'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -46,6 +50,26 @@ const HowItWorksRoute = HowItWorksRouteImport.update({
   path: '/how-it-works',
   getParentRoute: () => rootRouteImport,
 } as any)
+const StudentLoginRoute = StudentLoginRouteImport.update({
+  id: '/student/login',
+  path: '/student/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StudentRegisterRoute = StudentRegisterRouteImport.update({
+  id: '/student/register',
+  path: '/student/register',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TeacherLoginRoute = TeacherLoginRouteImport.update({
+  id: '/teacher/login',
+  path: '/teacher/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TeacherRegisterRoute = TeacherRegisterRouteImport.update({
+  id: '/teacher/register',
+  path: '/teacher/register',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -54,6 +78,10 @@ export interface FileRoutesByFullPath {
   '/community-map': typeof CommunityMapRoute
   '/features': typeof FeaturesRoute
   '/how-it-works': typeof HowItWorksRoute
+  '/student/login': typeof StudentLoginRoute
+  '/student/register': typeof StudentRegisterRoute
+  '/teacher/login': typeof TeacherLoginRoute
+  '/teacher/register': typeof TeacherRegisterRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -62,6 +90,10 @@ export interface FileRoutesByTo {
   '/community-map': typeof CommunityMapRoute
   '/features': typeof FeaturesRoute
   '/how-it-works': typeof HowItWorksRoute
+  '/student/login': typeof StudentLoginRoute
+  '/student/register': typeof StudentRegisterRoute
+  '/teacher/login': typeof TeacherLoginRoute
+  '/teacher/register': typeof TeacherRegisterRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -71,6 +103,10 @@ export interface FileRoutesById {
   '/community-map': typeof CommunityMapRoute
   '/features': typeof FeaturesRoute
   '/how-it-works': typeof HowItWorksRoute
+  '/student/login': typeof StudentLoginRoute
+  '/student/register': typeof StudentRegisterRoute
+  '/teacher/login': typeof TeacherLoginRoute
+  '/teacher/register': typeof TeacherRegisterRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -81,6 +117,10 @@ export interface FileRouteTypes {
     | '/community-map'
     | '/features'
     | '/how-it-works'
+    | '/student/login'
+    | '/student/register'
+    | '/teacher/login'
+    | '/teacher/register'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -89,6 +129,10 @@ export interface FileRouteTypes {
     | '/community-map'
     | '/features'
     | '/how-it-works'
+    | '/student/login'
+    | '/student/register'
+    | '/teacher/login'
+    | '/teacher/register'
   id:
     | '__root__'
     | '/'
@@ -97,6 +141,10 @@ export interface FileRouteTypes {
     | '/community-map'
     | '/features'
     | '/how-it-works'
+    | '/student/login'
+    | '/student/register'
+    | '/teacher/login'
+    | '/teacher/register'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -106,6 +154,10 @@ export interface RootRouteChildren {
   CommunityMapRoute: typeof CommunityMapRoute
   FeaturesRoute: typeof FeaturesRoute
   HowItWorksRoute: typeof HowItWorksRoute
+  StudentLoginRoute: typeof StudentLoginRoute
+  StudentRegisterRoute: typeof StudentRegisterRoute
+  TeacherLoginRoute: typeof TeacherLoginRoute
+  TeacherRegisterRoute: typeof TeacherRegisterRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -152,6 +204,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HowItWorksRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/student/login': {
+      id: '/student/login'
+      path: '/student/login'
+      fullPath: '/student/login'
+      preLoaderRoute: typeof StudentLoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/student/register': {
+      id: '/student/register'
+      path: '/student/register'
+      fullPath: '/student/register'
+      preLoaderRoute: typeof StudentRegisterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/teacher/login': {
+      id: '/teacher/login'
+      path: '/teacher/login'
+      fullPath: '/teacher/login'
+      preLoaderRoute: typeof TeacherLoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/teacher/register': {
+      id: '/teacher/register'
+      path: '/teacher/register'
+      fullPath: '/teacher/register'
+      preLoaderRoute: typeof TeacherRegisterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -162,6 +242,10 @@ const rootRouteChildren: RootRouteChildren = {
   CommunityMapRoute: CommunityMapRoute,
   FeaturesRoute: FeaturesRoute,
   HowItWorksRoute: HowItWorksRoute,
+  StudentLoginRoute: StudentLoginRoute,
+  StudentRegisterRoute: StudentRegisterRoute,
+  TeacherLoginRoute: TeacherLoginRoute,
+  TeacherRegisterRoute: TeacherRegisterRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
