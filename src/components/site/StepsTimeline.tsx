@@ -5,7 +5,6 @@ import { Reveal } from "./Reveal";
 export function StepsTimeline() {
   return (
     <div className="relative grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-      <div className="absolute left-0 right-0 top-12 hidden h-px bg-brand opacity-40 lg:block" aria-hidden />
       {steps.map((step, i) => {
         const Icon = step.icon;
         return (

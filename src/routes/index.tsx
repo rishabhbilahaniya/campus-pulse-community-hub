@@ -238,7 +238,7 @@ function Home() {
             <p className="text-primary-foreground/75">Create your account to be ready when reporting, voting and volunteering go live.</p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <Button asChild variant="hero" size="lg"><Link to="/student/register">I'm a student</Link></Button>
-              <Button asChild variant="glass" size="lg"><Link to="/teacher/register">I'm a teacher</Link></Button>
+              <Button asChild variant="glass-dark" size="lg"><Link to="/teacher/register">I'm a teacher</Link></Button>
             </div>
           </div>
         </div>
