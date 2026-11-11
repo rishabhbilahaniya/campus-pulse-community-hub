@@ -1,14 +1,92 @@
-# Welcome to your Lovable project
+# Campus Pulse Community Hub
+
+Act as a senior UI/UX designer and full-stack developer.
+
+Build a premium, futuristic, responsive web application named CampusX.
+
+Tagline: "Your Campus. Your Voice. A Better Tomorrow."
+
+Design requirements:
+
+Clean white background.
+
+Light blue, cyan, emerald and subtle purple accents.
+
+Dark navy typography.
+
+Glassmorphism cards.
+
+Smooth animations and subtle 3D effects.
+
+Professional SaaS-style interface.
+
+Fully responsive desktop, tablet and mobile layouts.
+
+Create these pages:
+
+Home
+
+Features
+
+How It Works
+
+Community Map
+
+AI Assistant
+
+About Us
+
+Student Login
+
+Student Registration
+
+Teacher Login
+
+Teacher Registration
+
+Student Dashboard
+
+Teacher Dashboard
+
+Admin Dashboard
+
+Homepage sections:
+
+Hero section with the heading "Making Every Campus Smarter, Safer & Better with AI".
+
+Report a Problem and Explore Campus buttons.
+
+Interactive campus-themed visual.
+
+Eight feature cards.
+
+How it works.
+
+Recent campus reports.
+
+Community voting preview.
+
+Volunteer opportunities.
+
+AI assistant introduction.
+
+Footer.
+
+Use reusable components and a consistent design system.
+
+For now, focus on frontend design and navigation. Do not create fake backend functionality or fake statistics. Clearly distinguish unfinished features from working features.
 
 This project was built with [Lovable](https://lovable.dev).
 
+**Live app**: https://campus-pulse-community-hub.lovable.app
+
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/f5651a13-9c44-4f34-8bd6-4921ea32b5c6).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +98,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
