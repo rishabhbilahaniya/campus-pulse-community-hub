@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Logo } from "@/components/site/Logo";
 import { PreviewNotice } from "@/components/site/PreviewNotice";
+import { ThemeToggle } from "@/components/site/ThemeToggle";
 import { comingSoon } from "@/lib/coming-soon";
 import { cn } from "@/lib/utils";
 
@@ -77,6 +78,7 @@ export function DashboardShell({
               <p className="font-display text-sm font-semibold sm:text-base">{roleLabel} dashboard</p>
             </div>
             <div className="flex items-center gap-2">
+              <ThemeToggle />
               <Button variant="ghost" size="icon" aria-label="Notifications" onClick={() => comingSoon("Notifications")}><Bell /></Button>
               <span className="grid size-9 place-items-center rounded-full bg-brand font-display text-sm font-bold text-primary-foreground">?</span>
             </div>
