@@ -9,7 +9,7 @@ const filters: ("All" | ReportCategory)[] = ["All", "Infrastructure", "Safety", 
 
 export function CampusMap() {
   const [filter, setFilter] = useState<(typeof filters)[number]>("All");
-  const [selected, setSelected] = useState<string>(campusSpots[0].id);
+  const [selected, setSelected] = useState<string>(campusSpots[0]?.id ?? "");
   const visible = campusSpots.filter((s) => filter === "All" || s.category === filter);
   const current = campusSpots.find((s) => s.id === selected);
 
