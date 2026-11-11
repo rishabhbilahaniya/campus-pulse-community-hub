@@ -1,6 +1,6 @@
 import { MapPin } from "lucide-react";
 import { useState } from "react";
-import campus from "@/assets/campus-hero.jpg";
+import campus from "@/assets/campus-hero.webp";
 import { campusSpots, categoryTone, toneDot, toneIcon, type ReportCategory } from "@/lib/content";
 import { cn } from "@/lib/utils";
 import { StatusBadge } from "./StatusBadge";
@@ -35,7 +35,7 @@ export function CampusMap() {
         </div>
         <div className="relative overflow-hidden rounded-2xl bg-muted/40">
           <div className="absolute inset-0 bg-grid" aria-hidden />
-          <img src={campus} alt="Campus map" width={1536} height={1152} className="relative w-full mix-blend-multiply" draggable={false} />
+          <img src={campus} alt="Campus map" width={1536} height={1152} className="relative w-full" draggable={false} />
           {visible.map((spot) => {
             const tone = categoryTone[spot.category];
             const isSel = spot.id === selected;

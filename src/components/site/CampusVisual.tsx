@@ -1,6 +1,6 @@
 import { Sparkles, ThumbsUp } from "lucide-react";
 import { useRef, useState } from "react";
-import campus from "@/assets/campus-hero.jpg";
+import campus from "@/assets/campus-hero.webp";
 import { campusSpots, categoryTone, toneDot } from "@/lib/content";
 import { cn } from "@/lib/utils";
 
@@ -30,7 +30,7 @@ export function CampusVisual() {
           alt="Isometric illustration of a modern campus with library, labs, hostels, cafeteria, sports field and park"
           width={1536}
           height={1152}
-          className="relative w-full select-none mix-blend-multiply"
+          className="relative w-full select-none"
           draggable={false}
         />
         {campusSpots.map((spot) => {

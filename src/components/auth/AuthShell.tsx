@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import type { ReactNode } from "react";
-import campus from "@/assets/campus-hero.jpg";
+import campus from "@/assets/campus-hero.webp";
 import { Logo } from "@/components/site/Logo";
 
 export function AuthShell({
@@ -19,7 +19,7 @@ export function AuthShell({
         <div className="absolute inset-0 bg-grid" aria-hidden />
         <div className="relative"><Logo /></div>
         <div className="perspective-1000 relative">
-          <img src={campus} alt="" width={1536} height={1152} className="mx-auto w-full max-w-xl mix-blend-multiply animate-float-slow" />
+          <img src={campus} alt="" width={1536} height={1152} className="mx-auto w-full max-w-xl animate-float-slow" />
         </div>
         <div className="glass-strong relative max-w-md rounded-3xl p-6">
           <h2 className="text-2xl font-bold">{sideTitle}</h2>
